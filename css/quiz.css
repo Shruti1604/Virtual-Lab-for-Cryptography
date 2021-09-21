@@ -1,0 +1,44 @@
+body{
+  background-color:black;
+}
+
+#main {
+width: 100%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+h1{
+  font-size: 40px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+label {
+display: block;
+font-family: 'Ubuntu', sans-serif;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+h4 {
+clear: both;
+padding-top: 20px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}

@@ -1,0 +1,92 @@
+#nav{
+background-color: #000000;
+}
+
+#MyNavbar{
+float: right;
+font-size: 20px;
+text-color: #ffffff;
+font-family: 'Ubuntu', sans-serif;
+}
+
+#navft{
+  background-color: #000000;
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 275px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.sidenav a:visited,
+.sidenav a:link {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+.main {
+  margin-left: 275px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.section-header h3 {
+  font-size: 40px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #535074;
+  width: 50%;
+}
+
+.about-content p {
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.about-content li {
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+}
+ .about-img {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .section-header p {
+    width: 100%;
+  }
+}
+#results{
+display:none;
+text-align:center;
+}

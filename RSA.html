@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <title>VIT Virtual Lab-RSA Algorithm</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/materialise.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" href="css/RSA.css">
+</head>
+<body>
+<div>
+<!--navigation bar-->
+<nav class="navbar navbar-inverse" id="nav" style="color:#ffffff" >
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar" >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="collapse navbar-collapse menu-div" id="MyNavbar">
+            <ul class="nav navbar-nav navbar-right menu-ul search-ul">
+                <li><a href="./home.html" style="color:#ffffff">Home</a></li>
+                <li><a href="./home.html/#expts" style="color:#ffffff">Experiments</a></li>
+                <li><a href="./home.html/#team" style="color:#ffffff">Developers</a></li>
+                <li><a href="./home.html/#footer" style="color:#ffffff">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--
+<div class="w3-sidebar w3-white w3-bar w3-block"id="sidebar" style="width:12%;left:0;height:100%" >
+    <a href="#introduction" class="w3-bar-item w3-button"><b>Introduction</b></a>
+    <a href="#expt" class="w3-bar-item w3-button"><b>Experiment</b></a>
+    <a href="#quiz" class="w3-bar-item w3-button"><b>Quiz</b></a>
+</div>-->
+</div>
+
+<div class="sidenav">
+    <br>
+    <u><a href="#introduction">Introduction</a></u>
+    <u><a href="#explanation">Explanation</a></u>
+    <u><a href="#prob">Problem Statements</a></u>
+    <u><a href="#expt">Experiment</a></u>
+    <u><a href="./quiz.html">Quiz</a></u>
+</div>
+<br><br>
+<div class="main">
+
+    <main id="main">
+
+        <section id="introduction">
+            <header class="section-header">
+                <h3>About RSA</h3>
+            </header>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-img">
+
+                            <img src="./images/RSA2.png" class="img-responsive" alt="Cinque Terre">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="about-content" style="font-size: 20px;">
+                            <p>RSA (Rivest–Shamir–Adleman) is an algorithm used by modern computers to encrypt and decrypt messages. It is an asymmetric cryptographic algorithm. Asymmetric means that there are two different keys. This is also called public key cryptography, because one of the keys can be given to anyone. The other key must be kept private. The algorithm is based on the fact that finding the factors of a large composite number is difficult: when the factors are prime numbers, the problem is called prime factorization. It is also a key pair (public and private key) generator.
+                                RSA involves a public key and private key. The public key can be known to everyone- it is used to encrypt messages. Messages encrypted using the public key can only be decrypted with the private key
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- #introduction -->
+<br><br>
+        <section id="explanation">
+            <header class="section-header">
+                <h3>Algorithm Explanation</h3>
+            </header>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-content" style="font-size: 20px; padding-left:50px; padding-top:30px;">
+                        <ol>
+                            <li>
+                                Choose two prime number p and q
+                            </li>
+                            <li>Compute the value of n and p</li>
+                            <li>Find the value of e (public key)</li>
+                            <li>Compute the value of d (private key) using gcd()</li>
+                            <li>Do the encryption and decryption:
+                                <br> &nbsp; &nbsp; &nbsp; a. Encryption is given as: c = t<sup>e</sup> mod n
+                                <br> &nbsp; &nbsp; &nbsp; b. Decryption is given as: t = c<sup>d</sup> mod n
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about-img" >
+
+                        <img src="./images/RSA_Block.png" class="img-responsive" alt="Cinque Terre" style="margin-right: 30px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statements -->
+        <br><br><br>
+        <section id="prob" class="section-bg">
+            <header class="section-header">
+                <h3>Problem Statements</h3>
+            </header>
+            <br>
+            <div class="about-content" style="padding-left: 30px; font-size: 20px;">
+                <ol>
+                    <li style="margin-bottom:8px">
+                        <p>P and Q are two prime numbers. P = 11 and Q = 3. If the message is '7', then find out the cipher text according to RSA algorithm.
+                        </p>
+                    </li>
+                    <li style="margin-bottom:8px">
+                        <p>P and Q are two prime numbers. P = 11 and Q = 3. If the message is '24', then find out the cipher text according to RSA algorithm.
+                        </p>
+                    </li>
+                    <li style="margin-bottom:8px">
+                        <p>P and Q are two prime numbers. P = 3 and Q = 5. If the message is '4', then find out the cipher text according to RSA algorithm
+                        </p>
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <br><br><br>
+        <section id="expt" class="section-bg">
+            <header class="section-header">
+                <h3>RSA Simulator</h3>
+            </header>
+            <br>
+            <center style="font-size:20px;  font-family: 'Ubuntu', sans-serif;">
+
+                <h5 style="font-size:20px;  font-family: 'Ubuntu', sans-serif;">
+                    Set 2 Prime numbers p and q and compute N (the modulus):</h5>
+                <br>
+                <table>
+                    <tr>
+                        <td>Enter First Prime Number:</td>
+                        <td><input type="number" value="" id="p"></td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+                    <tr>
+                        <td>Enter Second Prime Number:</td>
+                        <td><input type="number" value="" id="q">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h5 style="font-size:20px;  font-family: 'Ubuntu', sans-serif;">
+                    The values of <B>p</B> and <B>q</B> you provided yield a modulus <B>N</B>, and also a
+                    number <B>ϕ(n)</B> which is very important.
+                    <br>
+
+                    <P><B>N = p*q</B>
+                        <br><B>ϕ(n) = (p-1)*(q-1)</B>
+                </h5>
+                <br>
+
+                <table>
+                    <tr>
+                        <td>Enter the Message(plain text):</td>
+                        <td><input type="number" value="" id="msg">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <h5 style="font-size:20px;  font-family: 'Ubuntu', sans-serif; margin-bottom:15px;">
+                    Click on the button below to obtain results.
+                </h5>
+                <table>
+                    <tr>
+                        <td><button onclick="RSA();" class="btn btn-success">Apply RSA</button></td>
+                    </tr>
+                </table>
+                <br>
+                <table id="results">
+                    <tr>
+                        <td>Public Key: &nbsp;</td>
+                        <td id="publickey">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Exponent: &nbsp;</td>
+                        <td id="exponent">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Private Key: &nbsp;</td>
+                        <td id="privatekey">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Cipher Text: &nbsp;</td>
+                        <td id="ciphertext">
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+            </center>
+
+
+        </section><!-- #experiments -->
+        <br><br><br>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+  function RSA() {
+  var r = document.getElementById("results");
+  if(r.style.display == 'inline-block'){
+          r.style.display = 'none';}
+       else
+          {r.style.display = 'inline-block';}
+
+  var gcd, p, q, no, n, t, e, i, x;
+  gcd = function (a, b) { return (!b) ? a : gcd(b, a % b); };
+  p = document.getElementById('p').value;
+  q = document.getElementById('q').value;
+  no = document.getElementById('msg').value;
+  n = p * q;
+  t = (p - 1) * (q - 1);
+  for (e = 2; e < t; e++) {
+  if (gcd(e, t) == 1) {
+  break;
+  }
+  }
+  for (i = 0; i < 10; i++) {
+  x = 1 + i * t
+  if (x % e == 0) {
+  d = x / e;
+  break;
+  }
+  }
+  ctt = Math.pow(no, e).toFixed(0);
+  ct = ctt % n;
+  dtt = Math.pow(ct, d).toFixed(0);
+  dt = dtt % n;
+  document.getElementById('publickey').innerHTML = n;
+  document.getElementById('exponent').innerHTML = e;
+  document.getElementById('privatekey').innerHTML = d;
+  document.getElementById('ciphertext').innerHTML = ct;
+  }
+  </script>
+</html>

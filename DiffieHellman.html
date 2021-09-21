@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <title>VIT Virtual Lab-DH Algorithm</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/materialise.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" href="css/DiffieHellman.css">
+</head>
+<body>
+<div>
+    <!--navigation bar-->
+    <nav class="navbar navbar-inverse" id="nav" style="color:#ffffff" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar" >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse menu-div" id="MyNavbar">
+                <ul class="nav navbar-nav navbar-right menu-ul search-ul">
+                    <li><a href="./home.html" style="color:#ffffff">Home</a></li>
+                    <li><a href="./home.html/#expts" style="color:#ffffff">Experiments</a></li>
+                    <li><a href="./home.html/#team" style="color:#ffffff">Developers</a></li>
+                    <li><a href="./home.html/#footer" style="color:#ffffff">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--
+    <div class="w3-sidebar w3-white w3-bar w3-block"id="sidebar" style="width:12%;left:0;height:100%" >
+        <a href="#introduction" class="w3-bar-item w3-button"><b>Introduction</b></a>
+        <a href="#expt" class="w3-bar-item w3-button"><b>Experiment</b></a>
+        <a href="#quiz" class="w3-bar-item w3-button"><b>Quiz</b></a>
+    </div>-->
+</div>
+
+<div class="sidenav">
+    <br>
+    <u><a href="#introduction">Introduction</a></u>
+    <u><a href="#explanation">Explanation</a></u>
+    <u><a href="#prob">Problem Statements</a></u>
+    <u><a href="#expt">Experiment</a></u>
+    <u><a href="./quiz_DH.html">Quiz</a></u>
+</div>
+<br><br>
+<div class="main">
+
+    <main id="main">
+
+        <section id="introduction">
+            <header class="section-header">
+                <h3>Diffie Hellman Key Exchange Algorithm</h3>
+            </header>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <br><br>
+                        <div class="about-img">
+
+                            <img src="./images/diffie1.png" class="img-responsive" alt="Cinque Terre">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-6">
+                        <div class="about-content" style="font-size: 20px;">
+                            <p>
+                                Diffie-Hellman key exchange, also called exponential key exchange, is a method of digital encryption that uses numbers raised to specific powers to produce decryption keys on the basis of components that are never directly transmitted, making the task of a would-be code breaker mathematically overwhelming.
+                                The Diffie–Hellman key exchange method allows two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure channel. This key can then be used to encrypt subsequent communications using a symmetric-key cipher.
+                                DH is one of the earliest practical examples of public key exchange implemented within the field of cryptography.
+                                Published in 1976 by Diffie and Hellman, this is the earliest publicly known work that proposed the idea of a private key and a corresponding public key.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- #introduction -->
+
+        <!-- Algorithm -->
+        <br><br><br>
+        <section id="explanation" class="section-bg">
+            <header class="section-header">
+                <h3>Algorithm Explanation</h3>
+            </header>
+            <br>
+            <div class="about-content" style="font-size: 20px; padding-left:50px; padding-top:30px;">
+                <p>
+                    Diffie Hellman (DH) key exchange algorithm is a method for securely exchanging cryptographic keys over a public communications channel.
+                    Keys are not actually exchanged – they are jointly derived.<br>If Alice and Bob wish to communicate with each other, they first agree between them a large prime number 'p', and a generator (or base) 'g' (where 0 < g < p).
+                    <br>Alice chooses a secret integer 'a' (her private key) and then calculates 'g^a mod p' (which is her public key). Bob chooses his private key 'b', and calculates his public key in the same way.
+                    <br>Bob knows 'b' and 'g^a', so he can calculate (g^a)^b mod p = g^ab mod p. Therefore both Alice and Bob know a shared secret key – 'g^ab mod p'.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Problem Statements -->
+        <br><br><br>
+        <section id="prob" class="section-bg">
+            <header class="section-header">
+                <h3>Problem Statements</h3>
+            </header>
+            <br>
+            <div class="about-content" style="padding-left: 30px; font-size: 20px;">
+                <ol>
+                    <li style="margin-bottom:8px">
+                        <p>
+                            In a Diffie-Hellman Key Exchange, Alice and Bob have chosen prime value q=17 and primitive root=5.
+                            If Alice's secret key is 4 and Bob's secret key is 6, what is the secret key they exchanged?
+                        </p>
+                    </li>
+                    <li style="margin-bottom:8px">
+                        <p>
+                            In a Diffie-Hellman Key Exchange, Alice and Bob have chosen prime value q=23 and primitive root=5.
+                            If Alice's secret key is 6 and Bob's secret key is 15, what is the secret key they exchanged?
+                        </p>
+                    </li>
+                    <li style="margin-bottom:8px">
+                        <p>In a Diffie-Hellman Key Exchange, Alice and Bob have chosen prime value q=11 and primitive root=17.
+                            If Alice's secret key is 8 and Bob's secret key is 12, what is the secret key they exchanged?</p>
+                    </li>
+                    <li style="margin-bottom:8px">
+                        <p>In a Diffie-Hellman Key Exchange, Alice and Bob have chosen prime value q=353 and primitive root=3.
+                            If Alice's secret key is 97 and Bob's secret key is 233, what is the secret key they exchanged?</p>
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <br><br><br>
+        <section id="expt" class="section-bg">
+            <header class="section-header">
+                <h3>Diffie-Hellman Simulator</h3>
+            </header>
+            <br>
+            <center style="font-size:20px;  font-family: 'Ubuntu', sans-serif;">
+
+                <table>
+                    <tr>
+                        <td>Enter Prime Number:</td>
+                        <td><input type="number" value="" id="p"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Primitive root:</td>
+                        <td><input type="number" value="" id="g">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Private key for Alice:</td>
+                        <td><input type="number" value="" id="a"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Private key for Bob:</td>
+                        <td><input type="number" value="" id="b">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+
+                <h5 style="font-size:20px;  font-family: 'Ubuntu', sans-serif; margin-bottom:15px;">
+                    Click on the button below to obtain results.
+                </h5>
+                <table>
+                    <tr>
+                        <td><button onclick="DH();" class="btn btn-success">Find key</button></td>
+                    </tr>
+                </table>
+                <br>
+                <table id="results">
+                    <tr>
+                        <td>Public Key for Alice: &nbsp;</td>
+                        <td id="publickey_a">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Public Key for Bob: &nbsp;</td>
+                        <td id="publickey_b">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Secret Key for Alice: &nbsp;</td>
+                        <td id="secretkey_a">
+                        </td>
+                    </tr>
+                    <tr> <td><p></p></td></tr>
+
+                    <tr>
+                        <td>Secret Key for Bob: &nbsp;</td>
+                        <td id="secretkey_b">
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+            </center>
+
+        </section><!-- #experiments -->
+        <br><br><br>
+    </main>
+</div>
+</body>
+<script type="text/javascript">
+
+ function power(x, y, p) {
+ let res = 1;
+ x = x % p;
+ if (x == 0)
+ return 0;
+ while (y > 0)
+ {
+  if (y & 1)
+  res = (res * x) % p;
+  y = y >> 1;
+  x = (x * x) % p;
+  }
+  return res;
+}
+
+ function DH() {
+
+ var r = document.getElementById("results");
+  if(r.style.display == 'inline-block'){
+          r.style.display = 'none';}
+       else
+          {r.style.display = 'inline-block';}
+
+ var p, g, a, b, x, y, ka, kb;
+
+ p = document.getElementById('p').value;
+ g = document.getElementById('g').value;
+ a = document.getElementById('a').value;
+ b = document.getElementById('b').value;
+
+ x = power(g,a,p);
+ y = power(g,b,p);
+
+ ka = power(y,a,p);
+ kb = power(x,b,p);
+
+ document.getElementById('publickey_a').innerHTML = x;
+ document.getElementById('publickey_b').innerHTML = y;
+ document.getElementById('secretkey_a').innerHTML = ka;
+ document.getElementById('secretkey_b').innerHTML = kb;
+ }
+</script>
+</html>

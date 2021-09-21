@@ -1,0 +1,96 @@
+<html>
+<head>
+ <title>Diffie-Hellman Algorithm</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+ <center>
+ <h1>Diffie-Hellman Algorithm</h1>
+ <h2>Implemented Using HTML & Javascript</h2>
+ <hr>
+ <table>
+ <tr>
+ <td>Enter Prime Number:</td>
+ <td><input type="number" value="" id="p"></td>
+ </tr>
+ <tr>
+ <td>Enter Primitive root:</td>
+ <td><input type="number" value="" id="g"></p>
+ </td>
+ </tr>
+ <tr>
+ <td>Enter Private key for Alice:</td>
+ <td><input type="number" value="" id="a"></td>
+ </tr>
+ <tr>
+ <td>Enter Private key for Bob:</td>
+ <td><input type="number" value="" id="b"></p>
+ </td>
+ </tr>
+ <tr>
+ <td>Public Key for Alice:</td>
+ <td>
+ <p id="publickey_a"></p>
+ </td>
+ </tr>
+ <tr>
+ <td>Public Key for Bob:</td>
+ <td>
+ <p id="publickey_b"></p>
+ </td>
+ </tr>
+ <td>Secret Key for Alice:</td>
+ <td>
+ <p id="secretkey_a"></p>
+ </td>
+ </tr>
+ <tr>
+ <td>Secret Key for Bob:</td>
+ <td>
+ <p id="secretkey_b"></p>
+ </td>
+ </tr>
+ <tr>
+ <td><button onclick="DH();">Find key</button></td>
+ </tr>
+ </table>
+ </center>
+</body>
+
+<script type="text/javascript">
+ function power(x, y, p) {
+ let res = 1;
+ x = x % p;
+ if (x == 0)
+ return 0;
+ while (y > 0)
+ { 
+  if (y & 1)
+  res = (res * x) % p;
+  y = y >> 1;
+  x = (x * x) % p;
+  }
+  return res;
+}
+
+ function DH() {
+ var p, g, a, b, x, y, ka, kb;
+
+ p = document.getElementById('p').value;
+ g = document.getElementById('g').value;
+ a = document.getElementById('a').value;
+ b = document.getElementById('b').value;
+
+ x = power(g,a,p);
+ y = power(g,b,p);
+
+ ka = power(y,a,p);
+ kb = power(x,b,p);
+
+ document.getElementById('publickey_a').innerHTML = x;
+ document.getElementById('publickey_b').innerHTML = y;
+ document.getElementById('secretkey_a').innerHTML = ka;
+ document.getElementById('secretkey_b').innerHTML = kb;
+ }
+</script>
+</html>
